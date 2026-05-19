@@ -1013,12 +1013,18 @@
     }
     .equipe-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 28px;
     }
     .equipe-card {
       text-align: center;
       transition: transform 0.4s ease;
+    }
+    .equipe-card.equipe-card-wide {
+      grid-column: span 2;
+    }
+    .equipe-card.equipe-card-wide .equipe-avatar {
+      aspect-ratio: 3/2;
     }
     .equipe-card:hover { transform: translateY(-8px); }
     .equipe-avatar {
@@ -1745,9 +1751,9 @@
         <p class="equipe-text">Cuidado com a biomecânica e recuperação funcional, integrando o corpo em cada etapa do tratamento.</p>
       </div>
 
-      <div class="equipe-card reveal reveal-delay-2">
+      <div class="equipe-card equipe-card-wide reveal reveal-delay-2">
         <div class="equipe-avatar">
-          <img src="equipe-enfermagem.jpg" alt="Equipe de Enfermagem" style="object-fit: contain; background: #F5F0E8;">
+          <img src="equipe-enfermagem.jpg" alt="Equipe de Enfermagem">
         </div>
         <span class="equipe-role">Enfermagem</span>
         <h3 class="equipe-name">Acolhimento &amp; Segurança</h3>
